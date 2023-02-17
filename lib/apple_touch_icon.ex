@@ -36,6 +36,7 @@ defmodule AppleTouchIcon do
 
   def render() do
     render(
+      @default_path,
       @default_sizes,
       @default_device_attributes,
       @default_path
@@ -43,9 +44,9 @@ defmodule AppleTouchIcon do
   end
 
   def render(
-        sizes,
-        device_attributes \\ @default_device_attributes,
-        path \\ @default_path
+        path,
+        sizes \\ @default_sizes,
+        device_attributes \\ @default_device_attributes
       ) do
     header = "<link rel=\"apple-touch-icon\" href=\"#{path}/apple-touch-icon.png'/>"
 
