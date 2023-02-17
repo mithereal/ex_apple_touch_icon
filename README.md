@@ -36,6 +36,28 @@ in your layout template  place the following in the header block
 AppleTouchIcon.render()
 ## render a single icon
 AppleTouchIcon.render([])
+## render all options
+url = "/images"
+default_sizes = [
+    {57, 57},
+    {72, 72},
+    {76, 76},
+    {114, 114},
+    {120, 120},
+    {144, 144},
+    {152, 152},
+    {180, 180}
+  ]
+ default_device_attributes =[
+    %{
+      "min-device-width": 481,
+      "max-device-width": 1024,
+      layout: "landscape",
+      type: "px",
+      "webkit-device-pixel-ratio": 2
+    }
+  ]
+AppleTouchIcon.render(url,default_sizes,default_device_attributes)
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
