@@ -10,7 +10,7 @@ defmodule AppleTouchIcon.MixProject do
       deps: deps(),
       name: "AppleTouchIcon",
       source_url: "https://github.com/mithereal/ex_apple_touch_icon",
-      description: "AppleTouch Icons",
+      description: "Similar to the Favicon, the Apple touch icon is used for the web page icon on the Apple iPhone, iPod Touch, and iPad",
       docs: docs(),
       package: package(),
     ]
