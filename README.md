@@ -21,10 +21,10 @@ end
 ```
 
 orientation can be either landscape or portrait
-imagefolder can be spacified /images is default
+image_folder can be specified /images is default
 
 
-Icons  need to be added in the images folder in the following format /imagefolder/apple-touch-icon.png and imagefolder/apple-touch-icon-height-width.png and /ipad-orientation-height-width.png
+Icons  need to be added in the images folder in the following format /image_folder/apple-touch-icon.png and /image_folder/apple-touch-icon-height-width.png and /image_folder/ipad-orientation-height-width.png
 for each height/width/orientation combo
 
 
@@ -34,6 +34,8 @@ in your layout template  place the following in the header block
 ```elixir
 ## render the default header
 AppleTouchIcon.render()
+## render the default header specifying the path to the images
+AppleTouchIcon.render("/images")
 ## render a single icon
 AppleTouchIcon.render(nil,nil)
 ## render all options
