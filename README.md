@@ -54,9 +54,9 @@ default_sizes = [
     %{
       "min-device-width": 481,
       "max-device-width": 1024,
+      "webkit-device-pixel-ratio": 2,
       layout: "landscape",
-      type: "px",
-      "webkit-device-pixel-ratio": 2
+      type: "px"
     },
     %{
       "min-device-width": 1025,
@@ -65,9 +65,7 @@ default_sizes = [
     %{
       "device-width": 481,
       "device-height": 1024,
-      layout: "landscape",
-      type: "px",
-      "webkit-device-pixel-ratio": 2
+      layout: "portrait"
     }
   ]
 AppleTouchIcon.render(url,default_sizes,default_device_attributes)
