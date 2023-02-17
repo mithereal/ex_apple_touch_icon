@@ -42,6 +42,22 @@ defmodule AppleTouchIcon do
     )
   end
 
+  def render(arg) when is_list(arg) do
+    render(
+      @default_path,
+      arg,
+      @default_device_attributes
+    )
+  end
+
+  def render(arg, arg2) when is_list(arg) and is_list(arg2) do
+    render(
+      @default_path,
+      arg,
+      arg2
+    )
+  end
+
   def render(
         path,
         sizes \\ @default_sizes,
