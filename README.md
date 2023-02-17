@@ -35,7 +35,7 @@ in your layout template  place the following in the header block
 ## render the default header
 AppleTouchIcon.render()
 ## render a single icon
-AppleTouchIcon.render([], [])
+AppleTouchIcon.render(nil,nil)
 ## render all options
 url = "/images"
 default_sizes = [
