@@ -59,6 +59,10 @@ default_sizes = [
       "webkit-device-pixel-ratio": 2
     },
     %{
+      "min-device-width": 1025,
+      "max-device-width": 2222
+    },
+    %{
       "device-width": 481,
       "device-height": 1024,
       layout: "landscape",
