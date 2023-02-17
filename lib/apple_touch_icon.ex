@@ -32,10 +32,18 @@ defmodule AppleTouchIcon do
 
       iex> AppleTouchIcon.render()
       <html ... >
-
   """
+
+  def render() do
+    render(
+      @default_sizes,
+      @default_device_attributes,
+      @default_path
+    )
+  end
+
   def render(
-        sizes \\ @default_sizes,
+        sizes,
         device_attributes \\ @default_device_attributes,
         path \\ @default_path
       ) do
