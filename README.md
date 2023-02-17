@@ -20,12 +20,22 @@ def deps do
 end
 ```
 
+orientation can be either landscape or portrait
+imagefolder can be spacified /images is default
+
+
+Icons  need to be added in the images folder in the following format /imagefolder/apple-touch-icon.png and imagefolder/apple-touch-icon-height-width.png and /ipad-orientation-height-width.png
+for each height/width/orientation combo
+
 
 ## usage
 in your layout template  place the following in the header block
 
 ```elixir
+## render the default header
 AppleTouchIcon.render()
+## render a single icon
+AppleTouchIcon.render([])
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
