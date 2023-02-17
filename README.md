@@ -52,19 +52,19 @@ default_sizes = [
   ]
  default_device_attributes =[
     %{
-      "min-device-width": 481,
-      "max-device-width": 1024,
-      "webkit-device-pixel-ratio": 2,
+      min_device_width: 481,
+      max_device_width: 1024,
+      webkit_device_pixel_ratio: 2,
       layout: "landscape",
       type: "px"
     },
     %{
-      "min-device-width": 1025,
-      "max-device-width": 2222
+      min_device_width: 1025,
+      max_device_width: 2222
     },
     %{
-      "device-width": 481,
-      "device-height": 1024,
+      device_width: 481,
+      device_height: 1024,
       layout: "portrait"
     }
   ]

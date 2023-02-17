@@ -15,11 +15,11 @@ defmodule AppleTouchIcon do
   ]
   @default_device_attributes [
     %{
-      "min-device-width": 481,
-      "max-device-width": 1024,
+      min_device_width: 481,
+      max_device_width: 1024,
       layout: "landscape",
       type: "px",
-      "webkit-device-pixel-ratio": 2
+      webkit_device_pixel_ratio: 2
     }
   ]
 
@@ -108,11 +108,11 @@ defmodule AppleTouchIcon do
       for param <- device_attributes do
         case param do
           %{
-            "min-device-width": min_w,
-            "max-device-width": max_w,
+            min_device_width: min_w,
+            max_device_width: max_w,
             orientation: orientation,
             type: type,
-            "webkit-device-pixel-ratio": pr
+            webkit_device_pixel_ratio: pr
           } ->
             size = "#{min_w}x#{max_w}"
             min_w = "#{min_w}#{type}"
@@ -121,8 +121,8 @@ defmodule AppleTouchIcon do
             "<link rel='apple-touch-startup-image' href='#{path}/ipad-#{orientation}-#{size}.png' media='screen and (min-device-width: '#{min_w} ') and (max-device-width: '#{max_w}') and (-webkit-device-pixel-ratio: '#{pr}') and (orientation:'#{orientation}')' />"
 
           %{
-            "min-device-width": min_w,
-            "max-device-width": max_w,
+            min_device_width: min_w,
+            max_device_width: max_w,
             orientation: orientation,
             type: type
           } ->
@@ -132,14 +132,14 @@ defmodule AppleTouchIcon do
 
             "<link rel='apple-touch-startup-image' href='#{path}/ipad-#{orientation}-#{size}.png' media='screen and (min-device-width: '#{min_w} ') and (max-device-width: '#{max_w}') and (orientation:'#{orientation}')' />"
 
-          %{"min-device-width": min_w, "max-device-width": max_w, orientation: orientation} ->
+          %{min_device_width: min_w, max_device_width: max_w, orientation: orientation} ->
             size = "#{min_w}x#{max_w}"
             min_w = "#{min_w}px"
             max_w = "#{max_w}px"
 
             "<link rel='apple-touch-startup-image' href='#{path}/ipad-#{orientation}-#{size}.png' media='screen and (min-device-width: '#{min_w} ') and (max-device-width: '#{max_w}')  and (orientation:'#{orientation}')' />"
 
-          %{"min-device-width": min_w, "max-device-width": max_w} ->
+          %{min_device_width: min_w, max_device_width: max_w} ->
             size = "#{min_w}x#{max_w}"
             min_w = "#{min_w}px"
             max_w = "#{max_w}px"
@@ -147,11 +147,11 @@ defmodule AppleTouchIcon do
             "<link rel='apple-touch-startup-image' href='#{path}/ipad-portrait-#{size}.png' media='screen and (min-device-width: '#{min_w} ') and (max-device-width: '#{max_w}') />"
 
           %{
-            "device-width": w,
-            "device-height": h,
+            device_width: w,
+            device_height: h,
             orientation: orientation,
             type: type,
-            "webkit-device-pixel-ratio": pr
+            webkit_device_pixel_ratio: pr
           } ->
             size = "#{w}x#{h}"
             device_width = "#{w}#{type}"
@@ -159,21 +159,21 @@ defmodule AppleTouchIcon do
 
             "<link rel='apple-touch-startup-image' href='#{path}/ipad-#{orientation}-#{size}.png' media='screen and (device-width: '#{device_width} ') and (device-height: '#{device_height}') and (-webkit-device-pixel-ratio: '#{pr}') and (orientation:'#{orientation}')' />"
 
-          %{"device-width": w, "device-height": h, orientation: orientation, type: type} ->
+          %{device_width: w, device_height: h, orientation: orientation, type: type} ->
             size = "#{w}x#{h}"
             device_width = "#{w}#{type}"
             device_height = "#{h}#{type}"
 
             "<link rel='apple-touch-startup-image' href='#{path}/ipad-#{orientation}-#{size}.png' media='screen and (device-width: '#{device_width} ') and (device-height: '#{device_height}') and (orientation:'#{orientation}')' />"
 
-          %{"device-width": w, "device-height": h, orientation: orientation} ->
+          %{device_width: w, device_height: h, orientation: orientation} ->
             size = "#{w}x#{h}"
             device_width = "#{w}px"
             device_height = "#{h}px"
 
             "<link rel='apple-touch-startup-image' href='#{path}/ipad-#{orientation}-#{size}.png' media='screen and (device-width: '#{device_width} ') and (device-height: '#{device_height}') and (orientation:'#{orientation}')' />"
 
-          %{"device-width": w, "device-height": h} ->
+          %{device_width: w, device_height: h} ->
             size = "#{w}x#{h}"
             device_width = "#{w}px"
             device_height = "#{h}px"
