@@ -38,8 +38,7 @@ defmodule AppleTouchIcon do
     render(
       @default_path,
       @default_sizes,
-      @default_device_attributes,
-      @default_path
+      @default_device_attributes
     )
   end
 
